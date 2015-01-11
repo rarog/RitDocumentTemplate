@@ -1,0 +1,32 @@
+% Copyright (c) 2015 Andrej Sinicyn
+% Required variables:
+% "\logopath": path to the small logo shown in the header of all pages except the title page
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[german,english]{babel}
+\usepackage{graphicx}
+\usepackage{float}	
+\usepackage{color}
+\usepackage{geometry}
+\makeatletter
+\usepackage[pdftex,
+            pdfauthor={\@author},
+            pdftitle={\@title},
+            pdfsubject={\pdfsubject},
+            pdfkeywords={\pdfkeywords},
+            pdfborder={0 0 0}]{hyperref}
+\makeatother
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}
+\titleformat{\chapter}[block]
+            {\bfseries\Large}
+            {\thechapter}
+            {20pt}
+            {\vspace{0pt}}
+\geometry{a4paper,left=20mm,right=20mm,top=20mm,bottom=20mm}
+\definecolor{rit-blue}{RGB}{51,153,204}
+\pagestyle{fancy}
+\fancyhf{}
+\fancypagestyle{plain}{}
+\fancyhead[R]{\includegraphics[height=10mm]{\logopath}}

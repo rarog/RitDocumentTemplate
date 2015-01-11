@@ -1,0 +1,20 @@
+% Copyright (c) 2015 Andrej Sinicyn
+% Required variables:
+% "\bigtitleimage": path to the big image shown on the first page
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=1\textwidth]{\bigtitleimage}\\
+\iflanguage{english}{Last updated:}{\ignorespaces}
+\iflanguage{german}{Zuletzt aktualisiert:}{\ignorespaces}
+\makeatletter
+\@date
+\makeatother
+\end{center}
+\end{titlepage}
+\AddToShipoutPicture{\AtPageUpperLeft{\rotatebox{0}{\colorbox{rit-blue}{
+ \begin{minipage}{\paperheight}%
+  \hspace*{\stretch{1}}
+  \vbox to 106pt {}
+ \end{minipage}
+}}}}
+\tableofcontents
